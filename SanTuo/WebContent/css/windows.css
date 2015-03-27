@@ -1,7 +1,0 @@
-.mybtn{
-	cursor: pointer;
-}
-.mybtn :hover {
-	opacity: 0.3;  
-	background-color: black; 
-}
