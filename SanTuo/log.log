@@ -1,0 +1,108 @@
+
+2015-03-20 15:45:13
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+The Connection descriptor used by the client was:
+127.0.0.1:1521:orcl?oracle.jdbc.V8Compatible=true
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:261)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:387)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:439)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:165)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:35)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:801)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1201)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1257)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:405)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:581)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:577)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:78)
+	at com.jfinal.plugin.activerecord.TableInfoBuilder.buildTableInfo(TableInfoBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:106)
+	at com.test.test.<init>(test.java:24)
+	at com.test.test.main(test.java:32)
+
+2015-03-20 15:45:13
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+The Connection descriptor used by the client was:
+127.0.0.1:1521:orcl?oracle.jdbc.V8Compatible=true
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:261)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:387)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:439)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:165)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:35)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:801)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1201)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1257)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:405)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:581)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:577)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:78)
+	at com.jfinal.plugin.activerecord.TableInfoBuilder.buildTableInfo(TableInfoBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:106)
+	at com.test.test.<init>(test.java:24)
+	at com.test.test.main(test.java:32)
+
+2015-03-24 11:12:59
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12528, TNS:listener: all appropriate instances are blocking new connections
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1201)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1257)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:405)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:581)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:577)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:78)
+	at com.jfinal.plugin.activerecord.TableInfoBuilder.buildTableInfo(TableInfoBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:106)
+	at net.loyin.jFinal.plugin.AutoTableBindPlugin.start(AutoTableBindPlugin.java:53)
+	at com.test.test.<init>(test.java:25)
+	at com.test.test.main(test.java:31)
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12528, TNS:listener: all appropriate instances are blocking new connections
+ 
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:385)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 15 more
+
+2015-03-24 11:12:59
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12528, TNS:listener: all appropriate instances are blocking new connections
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:412)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1201)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1257)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:405)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:581)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:577)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:78)
+	at com.jfinal.plugin.activerecord.TableInfoBuilder.buildTableInfo(TableInfoBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:106)
+	at net.loyin.jFinal.plugin.AutoTableBindPlugin.start(AutoTableBindPlugin.java:53)
+	at com.test.test.<init>(test.java:25)
+	at com.test.test.main(test.java:31)
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12528, TNS:listener: all appropriate instances are blocking new connections
+ 
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:385)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1042)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:301)
+	... 15 more
